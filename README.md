@@ -1,7 +1,7 @@
 # CalculadoraIOs_Mizia
  Criação de calculadora inspirada na Calc do iOS. DOJO_01 - Digital House | Santander Mobile iOS
  
- ##Create by Mízia Lima
+ #### Create by Mízia Lima - [Linkedin](https://www.linkedin.com/in/miziasalima/)
 
 
  ## Digital House - Class01 - IOS (Swift) - DOJO_1
