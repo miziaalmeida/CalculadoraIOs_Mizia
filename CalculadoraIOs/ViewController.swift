@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     var number1: Double?
     var number2: Double?
     var calcOperator: String?
+    var hasComma: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +70,7 @@ class ViewController: UIViewController {
     //@IBAction - Conectar as ações ao código
     @IBAction func didTouchAC() {
         lblResult.text = "0"
+        hasComma = false
     }
     
     @IBAction func didTouchPlusMinus(_ sender: Any) {
@@ -76,41 +78,49 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTouchPercent(_ sender: Any) {
-        number1 = Double(lblResult.text ?? "")
+        number1 = Double(lblResult.text?.replacingOccurrences(of: ",", with: ".") ?? "")
         lblResult.text = String((number1 ?? 0) / 100)
+        hasComma = false
     }
     
     @IBAction func didTouchDivided(_ sender: Any) {
-        number1 = Double(lblResult.text ?? "")
+        number1 = Double(lblResult.text?.replacingOccurrences(of: ",", with: ".") ?? "")
         calcOperator = "/"
         lblResult.text = "0"
+        hasComma = false
     }
     
     @IBAction func didTouchMult(_ sender: Any) {
-        number1 = Double(lblResult.text ?? "")
+        number1 = Double(lblResult.text?.replacingOccurrences(of: ",", with: ".") ?? "")
         calcOperator = "*"
         lblResult.text = "0"
+        hasComma = false
     }
     
     @IBAction func didTouchMinus(_ sender: Any) {
-        number1 = Double(lblResult.text ?? "")
+        number1 = Double(lblResult.text?.replacingOccurrences(of: ",", with: ".") ?? "")
         calcOperator = "-"
         lblResult.text = "0"
+        hasComma = false
     }
     
     @IBAction func didTouchPlus(_ sender: Any) {
-        number1 = Double(lblResult.text ?? "")
+        number1 = Double(lblResult.text?.replacingOccurrences(of: ",", with: ".") ?? "")
         calcOperator = "+"
         lblResult.text = "0"
+        hasComma = false
     }
     
     @IBAction func didTouchComma(_ sender: Any) {
-        
+        if hasComma == false {
+            lblResult.text = (lblResult.text ?? "") + ","
+            hasComma = true
+        }
     }
     
     
     @IBAction func didTouchEqual(_ sender: Any) {
-        number2 = Double(lblResult.text ?? "")
+        number2 = Double(lblResult.text?.replacingOccurrences(of: ",", with: ".") ?? "")
         var result: Double?
         switch calcOperator {
         case "+":
@@ -132,7 +142,7 @@ class ViewController: UIViewController {
     //Funcao para separar os valores de result inteiro / double
         func formatResult(value: Double) {
         if Int(exactly: value) == nil {
-            lblResult.text = String(value)
+            lblResult.text = String(value).replacingOccurrences(of: ".", with: ",")
         } else {
             let intValue = Int(value)
             lblResult.text = "\(intValue)"
@@ -147,6 +157,5 @@ class ViewController: UIViewController {
         } else {
             lblResult.text = (lblResult.text ?? "") + String(sender.tag)
         }
-        
     }
 }
