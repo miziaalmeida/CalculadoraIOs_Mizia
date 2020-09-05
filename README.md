@@ -1,5 +1,7 @@
 # CalculadoraIOs_Mizia
  Criação de calculadora inspirada na Calc do iOS. DOJO_01 - Digital House | Santander Mobile iOS
+ 
+ ##Create by Mízia Lima
 
 
  ## Digital House - Class01 - IOS (Swift) - DOJO_1
@@ -25,7 +27,6 @@
    Ex: No caso do botão +, pegar os dois valores (x, y) inseridos pelo usuário e executar: x + y
    - O resultado só deve aparecer na tela depois que o usuário clicar no botão igual (=).
 
- <br> <br>
  ### Conceitos praticados:
    * IBOutlet
    * IBActions
@@ -36,6 +37,4 @@
    * Utilizacão ?? - or nil coalescing
    
   ### Preview: <br>
-  <div align="center">
-    <a href="https://www.youtube.com/embed/nRKGsrgfwic""><img src="https://www.youtube.com/embed/nRKGsrgfwic"" alt="IMAGE ALT TEXT"></a>
-  </div>
+  [![Demo CountPages alpha](https://j.gifs.com/D1jp95.gif)](https://youtu.be/nRKGsrgfwic)
