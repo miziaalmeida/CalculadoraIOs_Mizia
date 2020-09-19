@@ -1,9 +1,6 @@
 # Calculator iOS
  Criação de calculadora inspirada na Calc do iOS. DOJO_01 - Digital House | Santander Mobile iOS
  
- #### Created by Mízia Lima - [Linkedin](https://www.linkedin.com/in/miziasalima/)
-
-
  ## Digital House - Class01 - IOS (Swift) - DOJO_1
 
  - Primeiro aplicativo desenvolvido para a aula de Swift sobre variáveis, operações, conceito de constrains, autolayout, @IBOutlet, @IBActions, elementos gráficos e de estilo.
